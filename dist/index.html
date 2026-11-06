@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="dark">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#0A0A0A"><title>Design Atlas · 跨境设计工作台</title><meta name="description" content="为跨境设计负责人打造的工作台，连接项目、设计工具、趋势与 AIGC 实验。"><link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><script>try{document.documentElement.dataset.theme=localStorage.getItem("atlas-theme")==="light"?"light":"dark"}catch{}</script><link rel="stylesheet" href="style.css"></head>
+<body>
+<aside class="sidebar" id="sidebar">
+ <a class="brand" href="#home"><span class="brand-mark">a<span>✦</span></span><span>design atlas<small>跨境设计工作台</small></span></a>
+ <button class="space-select" id="spaceButton"><span class="space-icon" id="spaceIcon">P</span><span><b id="spaceName">个人工作空间</b><small id="spaceSub">PERSONAL WORKSPACE</small></span><span class="chevrons">⌄</span></button>
+ <div class="space-menu" id="spaceMenu" hidden><button data-space="personal">◉ 个人空间 <small>我的任务与灵感</small></button><button data-space="team">◈ 团队空间 <small>团队流程体验 · 本机保存</small></button></div>
+ <div class="nav-label">WORKSPACE / 工作空间</div><nav id="navigation"></nav>
+ <div class="sidebar-bottom"><div class="studio-note"><span class="spark">↗</span><b>设计有据，交付有序。</b><p>CREATE. REVIEW. REPEAT.</p><button id="guideButton">工作台使用指南 <span>↗</span></button></div><button class="profile" id="settingsButton"><span class="avatar">D</span><span><b>设计负责人</b><small>DESIGN DIRECTOR</small></span><span>&#9881;&#65038;</span></button></div>
+</aside>
+<div class="workspace">
+ <header class="topbar"><div class="breadcrumbs"><button class="mobile-menu" id="mobileMenu" aria-label="展开导航">☰</button><span>工作空间</span><span>/</span><b id="breadcrumb">总览</b></div><div class="top-actions"><span class="local-badge"><i></i> 示例起步 · 本机保存</span><button class="icon-button theme-toggle" id="themeButton" title="切换主题 / Switch theme" aria-label="切换主题 / Switch theme" aria-pressed="false"></button><button class="icon-button" id="backupButton" title="备份与导入" aria-label="备份与导入"></button><span class="avatar small">D</span></div></header>
+ <main><section class="page-heading"><div><div class="eyebrow" id="eyebrow">YOUR CREATIVE COMMAND CENTER</div><h1 id="pageTitle">跨境设计工作台</h1><p id="pageDescription">管理跨平台交付，沉淀可复用的设计判断。</p></div><div class="heading-actions"><span id="today"></span><button class="primary" id="newTaskButton">＋ 新建设计任务</button></div></section>
+ <div class="filterbar"><div class="filter-group" id="platformFilters"></div><div class="filter-right"><select id="categoryFilter" aria-label="品类筛选"><option value="all">全部品类</option><option value="家居">家居</option><option value="服饰">服饰</option></select><div class="search-wrap"><span id="searchIcon"></span><input type="search" id="searchInput" placeholder="搜索任务、灵感与实验" aria-label="搜索当前页面"></div></div></div>
+ <div id="content"></div>
+ <footer><span>DESIGN ATLAS <span class="footer-dot">·</span> 为跨境设计而生</span><span>个人与团队内容独立保存在当前浏览器 <span class="footer-dot">·</span> <button id="footerBackup">备份数据 ↗</button></span></footer>
+ </main>
+</div>
+<dialog id="modal"><div class="modal-head"><div><div class="eyebrow" id="modalEyebrow">DESIGN ATLAS</div><h2 id="modalTitle"></h2></div><button class="icon-button close-modal" aria-label="关闭">✕</button></div><div id="modalBody"></div></dialog>
+<div class="toast" id="toast" role="status"></div><script src="zip-save.js" defer></script><script src="link-library.js" defer></script><script src="app.js" defer></script>
+</body></html>

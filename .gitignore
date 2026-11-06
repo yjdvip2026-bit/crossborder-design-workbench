@@ -1,0 +1,12 @@
+# Local runtime, credentials, personal data and deployment identity
+.env
+.env.*
+!.env.example
+.openai/hosting.json
+node_modules/
+.DS_Store
+work/
+output/
+*.log
+*-backup.json
+*-deploy.tar.gz
